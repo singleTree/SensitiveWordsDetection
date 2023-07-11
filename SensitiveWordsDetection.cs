@@ -62,9 +62,9 @@ public class SensitiveWordsDetection
             {
                 current = next;
             }
-            else
+            else if (_root.Children.TryGetValue(input[i], out var rootNext))
             {
-                current = _root;
+                current = rootNext;
             }
             if (current.IsEndOfWord)
             {
